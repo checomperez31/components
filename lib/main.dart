@@ -1,10 +1,9 @@
-import 'package:components/screens/home_screen.dart';
-import 'package:components/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 
 import 'package:components/router/app_routes.dart';
+import 'package:components/theme/app_theme.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
 
@@ -13,19 +12,19 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Material App',
-      initialRoute: AppRoutes.initialRoute,
-      routes: AppRoutes.getAppRoutes(),
-      onGenerateRoute: AppRoutes.onGenerateRoute,
-      theme: AppTheme.lightTheme,
-    );
+        debugShowCheckedModeBanner: false,
+        title: 'Material App',
+        initialRoute: AppRoutes.initialRoute,
+        routes: AppRoutes.getAppRoutes(),
+        onGenerateRoute: AppRoutes.onGenerateRoute,
+        theme: AppTheme.lightTheme,
+      );
   }
 
   /**
    * Function to navigate to another component from splashscreen
    */
-  Widget createOrNavigateInSplashScreen(BuildContext context) {
+  /* Widget createOrNavigateInSplashScreen(BuildContext context) {
     return Center(
       child: FutureBuilder(
         future: authService.hasToken(), //this should be the method and it has to return a futurebuilder
@@ -47,5 +46,5 @@ class MyApp extends StatelessWidget {
         },
       ),
     );
-  }
+  } */
 }
